@@ -1,0 +1,159 @@
+@import url("./reset.css");
+
+/* 
+    GENERAL
+*/
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.my-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.my-col {
+    width: calc(100% - 20px);
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.my-col > * {
+    margin: 30px;
+}
+
+
+.my-col-big > * > * {
+    margin-bottom: 30px;
+}
+
+
+
+.bg-main{
+    background-color: var(--main-color);
+}
+
+.bg-main-light{
+    background-color: var(--main-color-light);
+}
+
+.bg-secondary{
+    background-color: var(--secondary-color);
+}
+
+
+
+/* 
+    HEADER
+*/
+
+header {
+    color: white;
+}
+
+
+
+
+.main-nav-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.main-nav-container nav{
+    display: none;
+}
+
+.main-nav-container nav ul li{
+    display: inline-block;
+    
+}
+
+.main-nav-container nav ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+/* 
+    MAIN
+*/
+
+main > section {
+    padding: 40px 0;
+}
+
+
+section .container .my-row .my-col {
+    text-align: center;
+}
+
+
+/* 
+    FOOTER
+*/
+
+
+
+
+
+/* 
+    DEBUG
+*/
+
+
+/* 
+    MEDIA QUERY
+*/
+/* TABLET */
+@media screen and (min-width: 768px) {
+
+    /* header */
+
+    /* main */
+    .my-col {
+        width: calc((100% / 3) - 20px);
+    }
+
+    section .container .my-row .my-col-big {
+        width: calc(((100% / 3) * 2) - 20px);
+        text-align: left;
+    }
+
+    
+
+}
+
+/* DESKTOP */
+@media screen and (min-width: 992px) {
+
+    /* header */
+    .main-nav-container nav{
+        display: block;
+    }
+
+    #hambuger-container {
+        display: none;
+    }
+
+    /* main */
+    .my-col-big{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .my-col-big > :last-child{
+        align-self: flex-end;
+    }
+
+}
+
